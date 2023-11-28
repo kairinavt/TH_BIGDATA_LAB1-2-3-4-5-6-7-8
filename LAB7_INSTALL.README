@@ -1,0 +1,14 @@
+sudo apt update
+sudo apt install openjdk-8-jdk
+wget https://downloads.apache.org/pig/pig-0.17.0/pig-0.17.0.tar.gz
+downloads.apache.org
+tar -xzvf pig-0.17.0.tar.gz
+sudo mv pig-0.17.0 /usr/local/pig
+
+echo 'export PIG_HOME=/usr/local/pig' >> ~/.bashrc
+echo 'export PATH=$PATH:$PIG_HOME/bin' >> ~/.bashrc
+echo 'export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64' >> ~/.bashrc
+
+source ~/.bashrc
+
+pig -version
